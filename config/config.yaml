@@ -252,13 +252,13 @@ notification:
   # 推送渠道配置
   channels:
     feishu:
-      webhook_url: ""                 # 飞书机器人 webhook URL
+      webhook_url: "${FEISHU_WEBHOOK_URL}"               # 飞书机器人 webhook URL
 
     dingtalk:
-      webhook_url: ""                 # 钉钉机器人 webhook URL
+      webhook_url: "${FEISHU_WEBHOOK_URL}"               # 钉钉机器人 webhook URL
 
     wework:
-      webhook_url: ""                 # 企业微信机器人 webhook URL
+      webhook_url: "${FEISHU_WEBHOOK_URL}"             # 企业微信机器人 webhook URL
       msg_type: "markdown"            # 消息类型：markdown(群机器人) | text(个人微信应用)
 
     telegram:
@@ -281,10 +281,10 @@ notification:
       url: ""                         # Bark 推送 URL（格式：https://api.day.app/your_device_key）
 
     slack:
-      webhook_url: ""                 # Slack Incoming Webhook URL
+      webhook_url: "${FEISHU_WEBHOOK_URL}"                # Slack Incoming Webhook URL
 
     generic_webhook:
-      webhook_url: ""                 # 通用 Webhook URL（支持 Discord、Matrix、IFTTT 等）
+      webhook_url: "${FEISHU_WEBHOOK_URL}"                # 通用 Webhook URL（支持 Discord、Matrix、IFTTT 等）
       payload_template: ""            # JSON 模板，支持 {title} 和 {content} 占位符
                                       # 示例：{"content": "{content}"}
                                       # 留空则使用默认格式：{"title": "{title}", "content": "{content}"}
