@@ -128,12 +128,12 @@ rss:
       url: "https://finance.yahoo.com/news/rssindex"
       enabled: false                  # 禁用
 
-    # 自定义源示例
-    # - id: "custom-feed"
-    #   name: "自定义源"
-    #   url: "https://example.com/feed.xml"
-    #   enabled: false
-    #   max_age_days: 0               # 示例：禁用过滤，推送所有文章
+  # 自定义源示例
+  # - id: "custom-feed"
+  #   name: "自定义源"
+  #   url: "https://example.com/feed.xml"
+  #   enabled: false
+  #   max_age_days: 0               # 示例：禁用过滤，推送所有文章
 
 
 # ===============================================================
@@ -353,7 +353,7 @@ ai:
   
   model: "deepseek/deepseek-chat"
 
-  api_key: ""                       # API Key（建议使用环境变量 AI_API_KEY）
+  api_key: ""                        # API Key（建议使用环境变量 AI_API_KEY）
   
   api_base: ""                      # 自定义 API 端点（可选，大多数情况留空）
                                     # 示例: https://api.openai.com/v1（自建代理或兼容接口）
@@ -372,7 +372,7 @@ ai:
   timeout: 120                      # 请求超时（秒）
 
   temperature: 1.0                  # 采样温度 (0.0-2.0)
-                                    # 注意：部分模型(如 gpt-5)可能要求必须为 1.0，否则会报错
+                                    # 注意：部分模型如 gpt-5 可能要求必须为 1.0，否则会报错
   
   max_tokens: 5000                  # 最大生成 token 数
                                     # 注意：如果 API 不支持此参数(报 HTTP 400)，请设为 0 以禁用发送
